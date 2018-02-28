@@ -61,12 +61,12 @@ STUDENT *ARR[]={&YASSER,&AHMED,&KHALID,&MARI,&MAYA,&ALY,&KIDO};
 
 	printData(peek(&list));
 
-	dequeue(&list);
+	dequeue(&list);						//FUNCTIONS RELATED TO QUEUE DATA STRUCTURE 
 
 	printf("\n\n\n\n\n");
 	displayList(&list,printData);
 
-	printData(peek(&list));
+	printData(peek(&list));			//PEEKING INTO STACK DATA 
 
 
 	return EXIT_SUCCESS;
