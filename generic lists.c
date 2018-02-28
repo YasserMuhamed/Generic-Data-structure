@@ -1,10 +1,10 @@
 /*
  ============================================================================
  Name        : generic.c
- Author      : 
+ Author      : YASSER MOHAMED ABDELGABER
  Version     :
  Copyright   : Your copyright notice
- Description : Hello World in C, Ansi-style
+ Description : Generic data structures 
  ============================================================================
  */
 
