@@ -11,6 +11,7 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include"glists.h"
+#include <string.h>
 
 typedef struct _student
 {
@@ -19,6 +20,7 @@ typedef struct _student
 }STUDENT;
 
 void printData(void*);
+int compare(void *list,void *data);
 
 
 int main(void) {
@@ -56,17 +58,16 @@ STUDENT *ARR[]={&YASSER,&AHMED,&KHALID,&MARI,&MAYA,&ALY,&KIDO};
 	enqueue(&list,&YASSER);
 
 	enqueue(&list,&ALY);
+	enqueue(&list,&YASSER);
+	enqueue(&list,&KHALID);
+	enqueue(&list,&YASSER);
+	enqueue(&list,&KIDO);
 
 	displayList(&list,printData);
 
 	printData(peek(&list));
 
-	dequeue(&list);						//FUNCTIONS RELATED TO QUEUE DATA STRUCTURE 
-
-	printf("\n\n\n\n\n");
-	displayList(&list,printData);
-
-	printData(peek(&list));			//PEEKING INTO STACK DATA 
+	search(&list,&AHMED,compare);
 
 
 	return EXIT_SUCCESS;
@@ -76,4 +77,9 @@ STUDENT *ARR[]={&YASSER,&AHMED,&KHALID,&MARI,&MAYA,&ALY,&KIDO};
 void printData(void *data)
 {
 	printf("%i : %s\n",((STUDENT*)data)->studentNumber,((STUDENT*)data)->name);
+}
+
+int compare(void *list,void *data)
+{
+	return !strcmp(((STUDENT*)list)->name,((STUDENT*)data)->name);
 }
