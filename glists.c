@@ -196,3 +196,24 @@ void *peek(GLIST *list)
 	return data;
 }
 
+int search(GLIST *list,void *data,int(*COMPARE)(void*,void*))
+{
+	list->current=list->head;
+	int cIndex=1;
+	while(list->current)
+	{
+		if(COMPARE(list->current->data,data))
+		{
+			printf("data found at position %i.\n",cIndex);
+			if(list->current->next==NULL)
+			{
+				return 1;
+			}
+		}
+		list->current=list->current->next;
+		cIndex++;
+	}
+	printf("NO DATA FOUND.\n");
+
+	return 0;
+}
