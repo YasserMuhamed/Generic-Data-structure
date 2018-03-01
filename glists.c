@@ -189,7 +189,7 @@ void* dequeue(GLIST *list)
 	return data;
 }
 
-void *peek(GLIST *list)
+void *peekStack(GLIST *list)
 {
 	void *data=list->head->data;
 
