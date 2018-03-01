@@ -34,7 +34,7 @@ void *pop(GLIST *list);
 void enqueue(GLIST *list,void *data);
 void *dequeue(GLIST *list);
 int isEmpty(GLIST *list);
-void *peek(GLIST *list);
+void *peekStack(GLIST *list);
 int search(GLIST *list,void *data,int (*COMPARE)(void*,void*));
 
 
